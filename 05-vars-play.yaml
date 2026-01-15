@@ -6,6 +6,6 @@
     DURATION: 10Hrs
     INSTITUTE: Udemy
   tasks:
-    -name: defining variables
-    ansible.builtin.debug:
+   -name: defining variables
+   ansible.builtin.debug:
       msg: "Hi welcome to {{ COURSE }} This is {{ DURATION }} Duration in {{ INSTITUTE }}"
