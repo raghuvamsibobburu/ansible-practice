@@ -1,6 +1,5 @@
 - name: group variables with inventory
-  hosts: local
-  connection: local
+  hosts: frontend
   tasks: 
     - name: printing variables with inventory
       ansible.builtin.debug:
