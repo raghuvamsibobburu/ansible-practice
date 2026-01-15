@@ -1,0 +1,13 @@
+- name: Task level variables
+  hosts: local
+  connection: local
+  vars:
+    COURSE: Devops with Aws
+    DURATION: 120+hrs
+    INSTITUTE: Udemy
+  tasks:
+    - name: printing task level variables
+      vars:
+        COURSE: K8's
+      ansible.builtin.debug:
+        msg: "This is {{ COURSE }}, with {{ DURATION }}, in {{ INSTITUTE }}"
