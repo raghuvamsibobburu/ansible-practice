@@ -11,3 +11,7 @@
         COURSE: K8's
       ansible.builtin.debug:
         msg: "This is {{ COURSE }}, with {{ DURATION }}, in {{ INSTITUTE }}"
+
+    - name: printing task level variables
+      ansible.builtin.debug:
+        msg: "This is {{ COURSE }}, with {{ DURATION }}, in {{ INSTITUTE }}"
