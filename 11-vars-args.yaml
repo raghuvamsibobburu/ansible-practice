@@ -1,0 +1,7 @@
+- name: group variables with inventory
+  hosts: local
+  connection: local
+  tasks: 
+    - name: printing variables with inventory
+      ansible.builtin.debug:
+        msg: "Hi Welcome to {{ INSTITUTE }}, we are going to discuss {{ COURSE }}, within {{ DURATION }}"
