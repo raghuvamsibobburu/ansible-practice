@@ -6,4 +6,4 @@
   tasks:
     - name: printing variables 
       ansible.builtin.debug:
-        msg: "Hi Welcome to {{ INSTITUTE }}, we will {{ COURSE }}, within {{ DURATION }}"
+        msg: "Hi Welcome to {{ INSTITUTE }}, we are going to discuss {{ COURSE }}, within {{ DURATION }}"
