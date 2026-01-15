@@ -1,0 +1,13 @@
+- name: Install nginx and run
+  hosts: frontend
+  become: yes # sudo access
+  tasks:
+  - name: Install nginx
+    ansible.builtin.package:
+      name: nginx
+      state: present
+  - name: Install nginx
+    ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: yes
