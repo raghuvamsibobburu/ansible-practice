@@ -1,0 +1,23 @@
+- name: mutli-playbook-1
+  hosts: local
+  connection: local
+  tasks: 
+    - name: playbook1
+      ansible.builtin.debug:
+        msg: "playbook1"
+
+- name: mutli-playbook-2
+  hosts: local
+  connection: local
+  tasks: 
+    - name: playbook2
+      ansible.builtin.debug:
+        msg: "playbook2"
+
+- name: mutli-playbook-3
+  hosts: local
+  connection: local
+  tasks: 
+    - name: playbook3
+      ansible.builtin.debug:
+        msg: "playbook3"
