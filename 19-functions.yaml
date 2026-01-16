@@ -10,4 +10,4 @@
 
     - name: functions or filters
       ansible.builtin.debug:
-       msg: "Hello {{ persons | split(,) }}"
+       msg: "Hello {{ persons | split(',') }}"
