@@ -31,12 +31,14 @@
         msg: "This is {{ course | items2dict }}"
 
     - name: convert to upper
-      person: "RaghuVamsi" 
+      vars:
+       person: "RaghuVamsi" 
       ansible.builtin.debug:
         msg: "This is {{ person | upper }}"
 
     - name: convert to lower
-      person: "RaghuVamsi" 
+      vars:
+       person: "RaghuVamsi" 
       ansible.builtin.debug:
         msg: "This is {{ person | lower }}"
 
