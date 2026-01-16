@@ -8,6 +8,6 @@
       ansible.builtin.debug:
        msg: "Hello {{ person | default('ramesh') }}"
 
-     - name: functions or filters
+    - name: functions or filters
       ansible.builtin.debug:
        msg: "Hello {{ persons }}"
