@@ -10,7 +10,7 @@
       msg: "{{ command_result }}"
 
   - name: Command
-    ansible.builtin.Command: "ls -lrt"
+    ansible.builtin.command: "ls -lrt"
     registar: command_output
 
   - name: print the Command module
