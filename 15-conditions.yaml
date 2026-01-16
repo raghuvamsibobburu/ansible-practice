@@ -1,16 +1,21 @@
 - name: playbook1
   hosts: frontend
+  become: true
   tasks:
     - name: Installing nginx using dnf
       ansible.builtin.dnf:
-      when:
-        ansible_os_family: "RedHat"
+        name: nginx
         state: present
+      when:
+        ansible_os_family == "RedHat"
+        
 
     - name: Installing nginx using apt
       ansible.builtin.apt:
-      when:
-        ansible_os_family: "debian"
+        name: nginx
         state: present
+      when:
+        ansible_os_family == "debian"
+        
 
       
