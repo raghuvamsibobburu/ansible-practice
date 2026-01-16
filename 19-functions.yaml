@@ -11,3 +11,12 @@
     - name: functions or filters
       ansible.builtin.debug:
        msg: "Hello {{ persons | split(',') }}"
+
+    - name: convert map to list
+      vars:
+        course:
+          name: "aws"
+          duration: "2hrs"
+          trainer: "udemy"
+      ansible.builtin.debug:
+        msg: "This is {{ course | dict2items }}"
