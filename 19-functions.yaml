@@ -42,4 +42,10 @@
       ansible.builtin.debug:
         msg: "This is {{ person | lower }}"
 
+    - name: check ip adress is correct or not
+      vars:
+       ip: 300.257.1.1 
+      ansible.builtin.debug:
+        msg: "{{ ip | ansible.utils.ipaddr }}"
+
     
