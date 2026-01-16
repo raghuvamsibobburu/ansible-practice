@@ -1,18 +1,18 @@
 - name: Shell vs Command
   hosts: frontend
   tasks:
-    - name: Command
-      ansible.builtin.Command: ls -lrt > /tmp/output.file 
-      registar: command_result
+  - name: Command
+    ansible.builtin.Command: ls -lrt > /tmp/output.file 
+    registar: command_result
 
-    - name: print the Command module
-      ansible.builtin.debug:
-        msg: "{{ command_result }}"
+  - name: print the Command module
+    ansible.builtin.debug:
+      msg: "{{ command_result }}"
 
-    - name: shell
-      ansible.builtin.Command: ls -lrt
-      registar: command_result
+  - name: shell
+    ansible.builtin.Command: ls -lrt
+    registar: command_result
 
-    - name: print the shell module
-      ansible.builtin.debug:
-        msg: "{{ command_result }}"
+  - name: print the shell module
+    ansible.builtin.debug:
+      msg: "{{ command_result }}"
