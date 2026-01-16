@@ -20,3 +20,24 @@
           trainer: "udemy"
       ansible.builtin.debug:
         msg: "This is {{ course | dict2items }}"
+
+    - name: convert list to map
+      vars:
+        course:
+          - {'key': 'name', 'value': 'aws'}
+          - {'key': 'duration', 'value': '2hrs'}
+          - {'key': 'trainer', 'value': 'udemy'}
+      ansible.builtin.debug:
+        msg: "This is {{ course | items2dict }}"
+
+    - name: convert to upper
+      person: "RaghuVamsi" 
+      ansible.builtin.debug:
+        msg: "This is {{ person | upper }}"
+
+    - name: convert to lower
+      person: "RaghuVamsi" 
+      ansible.builtin.debug:
+        msg: "This is {{ person | lower }}"
+
+    
