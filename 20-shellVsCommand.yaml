@@ -11,7 +11,7 @@
 
   - name: Command
     ansible.builtin.command: "ls -lrt"
-    registar: command_output
+    register: command_output
 
   - name: print the Command module
     ansible.builtin.debug:
