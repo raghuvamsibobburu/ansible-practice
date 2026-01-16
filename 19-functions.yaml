@@ -9,5 +9,5 @@
        msg: "Hello {{ person | default('ramesh') }}"
 
     - name: functions or filters
-      ansible.builtin.debug:
+      ansible.builtin.split:
        msg: "Hello {{ persons | split(',') }}"
