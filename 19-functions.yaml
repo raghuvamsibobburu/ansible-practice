@@ -1,7 +1,13 @@
 - name: functions or filters
   hosts: local
   connection: local
+  vars:
+    persons: "Ramesh, suresh, Raheem, indu"
   tasks:
     - name: functions or filters
       ansible.builtin.debug:
        msg: "Hello {{ person | default('ramesh') }}"
+
+     - name: functions or filters
+      ansible.builtin.debug:
+       msg: "Hello {{ persons }}"
